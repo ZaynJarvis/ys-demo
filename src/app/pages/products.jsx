@@ -48,7 +48,7 @@ const ProductsPage = () => {
     <div className="w-full bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8 text-center text-white overflow-x-hidden">
       <h1 className="text-4xl font-bold mb-12">Our Products</h1>
       <div ref={scrollContainer} className="flex overflow-x-auto snap-x snap-mandatory touch-pan-x scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        {products.map((product, index) => (
+        {products.map((product) => (
           <div key={product.id} className="w-full flex-shrink-0 snap-center">
             <ProductCard product={product} />
           </div>
