@@ -15,8 +15,8 @@ export default function Home() {
           <Image
             src={demoImg}
             alt="Background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{objectFit:"cover"}}
             quality={100}
             className="z-0 w-full h-auto"
           />
