@@ -15,9 +15,9 @@ export default function AboutPage() {
                 <div className="w-full md:w-1/4 p-4 bg-gray-700 shadow-lg rounded-lg">
                     <h2 className="text-3xl font-semibold mb-3">Philosophy</h2>
                     <p className="text-lg">
-                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients' expectations.
-                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients' expectations.
-                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients' expectations.
+                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients&apos; expectations.
+                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients&apos; expectations.
+                        We believe in sustainability, efficiency, and transparency. Our approach is to build products that not only meet but exceed our clients&apos; expectations.
                     </p>
                 </div>
                 <div className="w-full md:w-1/4 p-4 bg-gray-700 shadow-lg rounded-lg">
