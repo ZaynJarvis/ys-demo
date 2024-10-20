@@ -2,7 +2,7 @@ import Image from "next/image";
 import demoImg from "@/app/images/demo.jpg";
 import ProductsPage from "./pages/products";
 import AboutPage from "./pages/about";
-import ContactPage from "./pages/contact";
+import GallaryPage from "./pages/gallary";
 import NavBar from './components/NavBar';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -18,11 +18,11 @@ export default function Home() {
             layout="fill"
             objectFit="cover"
             quality={100}
-            className="z-0"
+            className="z-0 w-full h-auto"
           />
           <div className="absolute inset-0 bg-black bg-opacity-75 z-10 flex items-center justify-center">
             <div className="text-center p-5">
-              <h1 className="text-6xl text-white font-bold mb-4">YangShuai</h1>
+              <h1 className="text-6xl text-white font-bold mb-4">Cube Construction</h1>
               <p className="text-xl text-gray-300">Innovative solutions crafted with precision and care.</p>
             </div>
           </div>
@@ -34,8 +34,8 @@ export default function Home() {
       <section id="about" className="min-h-screen flex items-center justify-center bg-gray-700 text-white">
         <AboutPage />
       </section>
-      <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-600 text-white">
-        <ContactPage />
+      <section id="gallary" className="min-h-screen flex items-center justify-center bg-gray-600 text-white">
+        <GallaryPage />
       </section>
       <WhatsAppButton/>
     </div>
