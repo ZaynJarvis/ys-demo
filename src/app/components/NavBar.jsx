@@ -20,15 +20,15 @@ export default function NavBar() {
         </div>
   
         {/* Links List */}
-        <ul className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 absolute right-0 mt-12 md:mt-0 md:static bg-gray-950 md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'right-0' : '-right-96'}`}>
-          <li>
+        <ul className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 absolute right-0 mt-6 md:mt-0 md:static rounded-lg shadow-lg bg-gray-950 md:bg-transparent transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-70' : 'opacity-0 invisible delay-300'}`}>
+        <li>
             <a href="#home" onClick={() => setIsOpen(false)} className="text-white hover:text-gray-300 cursor-pointer block p-4">Home</a>
           </li>
           <li>
             <a href="#products" onClick={() => setIsOpen(false)} className="text-white hover:text-gray-300 cursor-pointer block p-4">Products</a>
           </li>
           <li>
-            <a href="#about" onClick={() => setIsOpen(false)} className="text-white hover:text-gray-300 cursor-pointer block p-4">About Us</a>
+            <a href="#about" onClick={() => setIsOpen(false)} className="text-white hover:text-gray-300 cursor-pointer block p-4">About</a>
           </li>
           <li>
             <a href="#contact" onClick={() => setIsOpen(false)} className="text-white hover:text-gray-300 cursor-pointer block p-4">Contact</a>

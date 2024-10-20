@@ -4,6 +4,7 @@ import ProductsPage from "./pages/products";
 import AboutPage from "./pages/about";
 import ContactPage from "./pages/contact";
 import NavBar from './components/NavBar';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-600 text-white">
         <ContactPage />
       </section>
+      <WhatsAppButton/>
     </div>
   );
 }
