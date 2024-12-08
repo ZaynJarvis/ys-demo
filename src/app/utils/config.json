@@ -1,0 +1,50 @@
+{
+    "gallery_path": [
+        "/images/ramen_0.jpg",
+        "/images/ramen_1.jpg",
+        "/images/ramen_2.jpg",
+        "/images/ramen_3.jpg",
+        "/images/ramen_4.jpg",
+        "/images/ramen_5.jpg",
+        "/images/ramen_6.jpg",
+        "/images/ramen_7.jpg",
+        "/images/ramen_8.jpg",
+        "/images/ramen_9.jpg",
+        "/images/tang_0.jpg",
+        "/images/tang_1.jpg",
+        "/images/tang_2.jpg",
+        "/images/tang_3.jpg",
+        "/images/tang_4.jpg",
+        "/images/tang_5.jpg"
+    ],
+    "product_info": [
+        {
+            "id": "tang",
+            "name": "Tang Dynasty Cuisine",
+            "imageUrl": "/images/tang_1.jpg",
+            "date": "2022-10-01",
+            "description": "Experience the richness of traditional Chinese flavors at Tang Dynasty Cuisine. Our menu features authentic recipes passed down through generations, emphasizing fresh ingredients and classic techniques."
+        },
+        {
+            "id": "ramen",
+            "name": "Tokyo Ramen House",
+            "imageUrl": "/images/ramen_1.jpg",
+            "date": "2022-09-15",
+            "description": "Dive into the heart of Tokyo with our authentic Japanese ramen. Tokyo Ramen House offers a variety of rich broths and freshly made noodles, perfect for experiencing Japan's beloved noodle culture."
+        }
+    ],
+    "about": [
+        {
+            "title": "Our Expertise",
+            "content": "At Cube Construction, we leverage over two decades of specialized experience in shop interior design to create spaces that not only meet the unique needs of our clients but also exceed their expectations. Based in the vibrant city of Singapore, we have a proven track record of transforming commercial environments into stunning, functional spaces that attract and engage customers."
+        },
+        {
+            "title": "Commitment to Quality",
+            "content": "Our dedication to delivering the highest quality results is unwavering. At Cube Construction, every project is a partnership, and we commit to maintaining open communication, transparency, and meticulous attention to detail. We use only the finest materials and the latest design techniques to ensure that each space we design stands the test of time."
+        },
+        {
+            "title": "Innovative Design",
+            "content": "Innovation is at the heart of Cube Construction. We continuously explore new trends, technologies, and creative design techniques to provide cutting-edge solutions tailored to each client’s needs. Whether it's a retail shop, a boutique, or a large commercial center, we strive to create spaces that are both visually appealing and highly functional, ensuring that every square inch works in harmony with the client's vision and operational requirements."
+        }
+    ]
+}

@@ -2,21 +2,10 @@
 
 import { useState, useRef, useEffect } from 'react';
 import ProductCard from "@/app/components/ProjectCard";
-import product1 from "@/app/images/products_1.jpg";
-import product2 from "@/app/images/products_2.jpg";
-import product3 from "@/app/images/products_3.jpg";
-import product4 from "@/app/images/products_4.jpg";
-import product5 from "@/app/images/products_5.jpg";
-import product6 from "@/app/images/products_6.jpg";
+import config from '@/app/utils/config.json';
 
-const products = [
-  { id: 1, name: "Skyview Drone", imageUrl: product1, date: "2022-10-01", description: "A brief description of Skyview Drone." },
-  { id: 2, name: "EcoSmart Thermostat", imageUrl: product2, date: "2022-09-15", description: "An innovative solution designed for efficiency and sustainability." },
-  { id: 3, name: "Quantum Processor", imageUrl: product3, date: "2022-08-30", description: "Advanced technology that redefines industry standards." },
-  { id: 4, name: "Xtreme Performer GPU", imageUrl: product4, date: "2022-07-24", description: "Cutting-edge design with exceptional performance." },
-  { id: 5, name: "CustomFlex Robotics Kit", imageUrl: product5, date: "2022-06-18", description: "Customizable features tailored to meet specific needs." },
-  { id: 6, name: "Indestructo Safe", imageUrl: product6, date: "2022-05-05", description: "Reliable and durable, built to last under tough conditions." }
-];
+const products = config.product_info;
+
 const ProductsPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainer = useRef(null);
