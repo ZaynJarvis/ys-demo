@@ -1,5 +1,5 @@
 const WhatsAppButton = () => {
-  const phoneNumber = "+6583099012";
+  const phoneNumber = "+6580881055";
   const waLink = `https://wa.me/${phoneNumber}`;
 
   return (
