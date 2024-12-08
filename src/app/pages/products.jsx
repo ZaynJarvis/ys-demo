@@ -35,7 +35,7 @@ const ProductsPage = () => {
 
   return (
     <div className="w-full bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8 text-center text-white">
-      <h1 className="text-4xl font-bold mb-12">Our Projects</h1>
+      <h1 className="text-3xl md:text-4xl font-bold mb-12">Our Projects</h1>
       {/* <div ref={scrollContainer} className="flex overflow-x-auto snap-x snap-mandatory touch-pan-x scrollbar-hide space-x-4" style={{ width: '100%', scrollPadding: '0 50%' }}> */}
       <div ref={scrollContainer} className="flex overflow-x-auto snap-x snap-mandatory touch-pan-x scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto w-full">
         {products.map((product) => (

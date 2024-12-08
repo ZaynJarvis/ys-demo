@@ -22,8 +22,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-75 z-10 flex items-center justify-center">
             <div className="text-center p-5">
-              <h1 className="text-6xl text-white font-bold mb-4">Cube Construction</h1>
-              <p className="text-xl text-gray-300">Innovative solutions crafted with precision and care.</p>
+              <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">Cube Construction</h1>
+              <p className="md:text-xl text-gray-300">Innovation crafted with precision and care.</p>
             </div>
           </div>
         </div>
