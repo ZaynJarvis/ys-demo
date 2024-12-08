@@ -14,7 +14,6 @@ const ProductCard = ({ product }) => {
           iv_load_policy:3,
       },
   };
-  console.log(product)
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg shadow-lg w-full">
