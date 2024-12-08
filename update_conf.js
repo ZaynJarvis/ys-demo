@@ -8,8 +8,8 @@ const csvPath = path.join(__dirname, 'projects.csv');
 // Helper function to parse CSV data
 function parseCSVData(data) {
     return data.split('\n').filter(line => line).map(line => {
-        const [id, name, imageUrl, date, description] = line.split('||');
-        return { id, name, imageUrl, date, description };
+        const [id, name, imageUrl, videoID, date, description] = line.split('||');
+        return { id, name, imageUrl, videoID, date, description, media_type: videoID?'video':'image' };
     });
 }
 

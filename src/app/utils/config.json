@@ -21,16 +21,29 @@
         {
             "id": "tang",
             "name": "Tang Dynasty Cuisine",
-            "imageUrl": "/images/tang_1.jpg",
+            "imageUrl": "/images/tang_3.jpg",
+            "videoID": "",
             "date": "2022-10-01",
-            "description": "Experience the richness of traditional Chinese flavors at Tang Dynasty Cuisine. Our menu features authentic recipes passed down through generations, emphasizing fresh ingredients and classic techniques."
+            "description": "Experience the richness of traditional Chinese flavors at Tang Dynasty Cuisine. Our menu features authentic recipes passed down through generations, emphasizing fresh ingredients and classic techniques.",
+            "media_type": "image"
         },
         {
             "id": "ramen",
             "name": "Tokyo Ramen House",
             "imageUrl": "/images/ramen_1.jpg",
+            "videoID": "",
             "date": "2022-09-15",
-            "description": "Dive into the heart of Tokyo with our authentic Japanese ramen. Tokyo Ramen House offers a variety of rich broths and freshly made noodles, perfect for experiencing Japan's beloved noodle culture."
+            "description": "Dive into the heart of Tokyo with our authentic Japanese ramen. Tokyo Ramen House offers a variety of rich broths and freshly made noodles, perfect for experiencing Japan's beloved noodle culture.",
+            "media_type": "image"
+        },
+        {
+            "id": "extra",
+            "name": "Designer Residence",
+            "imageUrl": "",
+            "videoID": "4jnzf1yj48M",
+            "date": "2022-09-15",
+            "description": "We were engage to film a luxury property real estate video on behalf of Williams Luxury at 25A Gurrs Road, Beulah Park, SA 5067. A modern designer home located in Adelaide's prestigious eastern suburb.",
+            "media_type": "video"
         }
     ],
     "about": [

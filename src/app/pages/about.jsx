@@ -6,7 +6,7 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold mb-16">About Us</h1>
             <div className="flex flex-wrap justify-center gap-12 max-w-12xl">
                 {
-                    config.about.map(c => <div className="w-full md:w-1/4 p-4 bg-gray-700 shadow-lg rounded-lg">
+                    config.about.map(c => <div key={c.title} className="w-full md:w-1/4 p-4 bg-gray-700 shadow-lg rounded-lg">
                         <h2 className="text-3xl font-semibold mb-3">{c.title}</h2>
                         <p className="text-lg">
                             {c.content}
