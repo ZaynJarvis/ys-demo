@@ -2,7 +2,7 @@ import Image from "next/image";
 import demoImg from "@/app/images/demo.jpg";
 import ProductsPage from "./pages/products";
 import AboutPage from "./pages/about";
-import GallaryPage from "./pages/gallary";
+import ContactPage from "./pages/gallary";
 import NavBar from './components/NavBar';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -34,8 +34,8 @@ export default function Home() {
       <section id="about" className="min-h-screen flex items-center justify-center bg-gray-700 text-white">
         <AboutPage />
       </section>
-      <section id="gallary" className="min-h-screen flex items-center justify-center bg-gray-600 text-white">
-        <GallaryPage />
+      <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-600 text-white">
+        <ContactPage />
       </section>
       <WhatsAppButton/>
     </div>

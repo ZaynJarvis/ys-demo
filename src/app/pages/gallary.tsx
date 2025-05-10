@@ -1,35 +1,26 @@
-import Image from 'next/image';
-// import { config } from '@/app/utils/conf';
-import config from '@/app/utils/config.json';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
-const GalleryPage = () => {
-    const images = config.gallery_path
-
+const ContactPage = () => {
     return (
-        <div className="w-full bg-gray-900 min-h-screen flex p-0 text-white flex-col md:flex-row relative">
-            <div className="md:w-1/3 text-left text-lg m-8">
-                <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
-                <div className="contact-container">
-                    <p><strong>Email:</strong> sales@cubecon.sg</p>
-                    <p><strong>Phone:</strong> +65 8088 1055</p>
-                    <p className='flex'><strong>Address:&nbsp;</strong>
-                    <span>
-                        52 Telok Blangah Road,<br/>
-                        #02-11,<br/>
-                        Singapore 098829</span>
-                    </p>
+        <div className="w-full min-h-screen flex items-center justify-center bg-gray-900 text-white p-8">
+            <div className="bg-gray-800 rounded-xl shadow-lg p-10 max-w-md w-full flex flex-col gap-6">
+                <h1 className="text-3xl font-bold mb-2 text-center">Contact Us</h1>
+                <p className="text-gray-400 text-center mb-6">We'd love to hear from you. Reach out to us using the information below.</p>
+                <div className="flex items-center gap-4">
+                    <FaEnvelope className="text-blue-400 w-6 h-6" />
+                    <span className="text-gray-200 text-lg">sales@cubecon.sg</span>
                 </div>
-            </div>
-            <div className="relative md:w-2/3" style={{ columnCount: 3, columnGap: "0px" }}>
-                <div className="absolute inset-0 md:inset-y-0 md:right-auto w-full md:w-48 h-48 md:h-full bg-gradient-to-b md:bg-gradient-to-r from-gray-900 via-transparent to-transparent"></div>
-                {images.map((images, index) => (
-                    <div key={index} className="mb-0 break-inside-avoid">
-                        <Image src={images} alt={`Gallery image ${index + 1}`} style={{ width: "100%", display: "block" }} width={720} height={720} />
-                    </div>
-                ))}
+                <div className="flex items-center gap-4">
+                    <FaPhone className="text-green-400 w-6 h-6" />
+                    <span className="text-gray-200 text-lg">+65 8088 1055</span>
+                </div>
+                <div className="flex items-start gap-4">
+                    <FaMapMarkerAlt className="text-yellow-400 w-6 h-6 mt-1" />
+                    <span className="text-gray-200 text-lg">52 Telok Blangah Road,<br/>#02-11,<br/>Singapore 098829</span>
+                </div>
             </div>
         </div>
     );
 }
 
-export default GalleryPage;
+export default ContactPage;

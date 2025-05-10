@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 // Declare this file as a client component
 export default function NavBar() {
@@ -55,7 +56,7 @@ export default function NavBar() {
                     <a href="#about" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">About</a>
                 </li>
                 <li>
-                    <a href="#gallary" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">Gallary</a>
+                    <a href="#contact" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">Contact</a>
                 </li>
             </ul>
         </nav>
