@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import Link from 'next/link';
 
 // Declare this file as a client component
 export default function NavBar() {

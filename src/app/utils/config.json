@@ -1,40 +1,42 @@
 {
-    "gallery_path": [
-        "/images/ramen_0.jpg",
-        "/images/ramen_1.jpg",
-        "/images/ramen_2.jpg",
-        "/images/ramen_3.jpg",
-        "/images/ramen_4.jpg",
-        "/images/ramen_5.jpg",
-        "/images/ramen_6.jpg",
-        "/images/ramen_7.jpg",
-        "/images/ramen_8.jpg",
-        "/images/ramen_9.jpg",
-        "/images/tang_0.jpg",
-        "/images/tang_1.jpg",
-        "/images/tang_2.jpg",
-        "/images/tang_3.jpg",
-        "/images/tang_4.jpg",
-        "/images/tang_5.jpg"
-    ],
     "product_info": [
         {
             "id": "tang",
             "name": "Tang Dynasty Cuisine",
-            "imageUrl": "/images/tang_3.jpg",
+            "imageUrl": "/images/tang/tang_3.jpg",
             "videoID": "",
             "date": "2022-10-01",
             "description": "Experience the richness of traditional Chinese flavors at Tang Dynasty Cuisine. Our menu features authentic recipes passed down through generations, emphasizing fresh ingredients and classic techniques.",
-            "media_type": "image"
+            "media_type": "image",
+            "gallery": [
+                "/images/tang/tang_0.jpg",
+                "/images/tang/tang_1.jpg",
+                "/images/tang/tang_2.jpg",
+                "/images/tang/tang_3.jpg",
+                "/images/tang/tang_4.jpg",
+                "/images/tang/tang_5.jpg"
+            ]
         },
         {
             "id": "ramen",
             "name": "Tokyo Ramen House",
-            "imageUrl": "/images/ramen_1.jpg",
+            "imageUrl": "/images/ramen/ramen_1.jpg",
             "videoID": "",
             "date": "2022-09-15",
             "description": "Dive into the heart of Tokyo with our authentic Japanese ramen. Tokyo Ramen House offers a variety of rich broths and freshly made noodles, perfect for experiencing Japan's beloved noodle culture.",
-            "media_type": "image"
+            "media_type": "image",
+            "gallery": [
+                "/images/ramen/ramen_0.jpg",
+                "/images/ramen/ramen_1.jpg",
+                "/images/ramen/ramen_2.jpg",
+                "/images/ramen/ramen_3.jpg",
+                "/images/ramen/ramen_4.jpg",
+                "/images/ramen/ramen_5.jpg",
+                "/images/ramen/ramen_6.jpg",
+                "/images/ramen/ramen_7.jpg",
+                "/images/ramen/ramen_8.jpg",
+                "/images/ramen/ramen_9.jpg"
+            ]
         },
         {
             "id": "extra",
@@ -43,7 +45,8 @@
             "videoID": "4jnzf1yj48M",
             "date": "2022-09-15",
             "description": "We were engage to film a luxury property real estate video on behalf of Williams Luxury at 25A Gurrs Road, Beulah Park, SA 5067. A modern designer home located in Adelaide's prestigious eastern suburb.",
-            "media_type": "video"
+            "media_type": "video",
+            "gallery": []
         }
     ],
     "about": [
@@ -57,7 +60,7 @@
         },
         {
             "title": "Innovative Design",
-            "content": "Innovation is at the heart of Cube Construction. We continuously explore new trends, technologies, and creative design techniques to provide cutting-edge solutions tailored to each client’s needs. Whether it's a retail shop, a boutique, or a large commercial center, we strive to create spaces that are both visually appealing and highly functional, ensuring that every square inch works in harmony with the client's vision and operational requirements."
+            "content": "Innovation is at the heart of Cube Construction. We continuously explore new trends, technologies, and creative design techniques to provide cutting-edge solutions tailored to each client's needs. Whether it's a retail shop, a boutique, or a large commercial center, we strive to create spaces that are both visually appealing and highly functional, ensuring that every square inch works in harmony with the client's vision and operational requirements."
         }
     ]
 }
