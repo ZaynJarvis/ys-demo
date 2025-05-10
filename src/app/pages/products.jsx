@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ProductCard from "@/app/components/ProjectCard";
 import config from '@/app/utils/config.json';
+import Link from "next/link";
 
 const products = config.product_info;
 
@@ -39,8 +40,12 @@ const ProductsPage = () => {
       {/* <div ref={scrollContainer} className="flex overflow-x-auto snap-x snap-mandatory touch-pan-x scrollbar-hide space-x-4" style={{ width: '100%', scrollPadding: '0 50%' }}> */}
       <div ref={scrollContainer} className="flex overflow-x-auto snap-x snap-mandatory touch-pan-x scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto w-full">
         {products.map((product) => (
-          <div key={product.id} className="flex-shrink-0 snap-center w-full" > {/* 8rem is adjusted based on your padding and spacing */}
-            <ProductCard product={product} />
+          <div key={product.id} className="flex-shrink-0 snap-center w-full">
+            <Link href={`/projects/${product.id}`} passHref legacyBehavior>
+              <a style={{ display: 'block', height: '100%' }}>
+                <ProductCard product={product} />
+              </a>
+            </Link>
           </div>
         ))}
       </div>
