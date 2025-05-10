@@ -6,6 +6,11 @@ import ContactPage from "./pages/gallary";
 import NavBar from './components/NavBar';
 import WhatsAppButton from './components/WhatsAppButton';
 
+export const metadata = {
+  title: "Cube Construction | F&B Interior Design & Renovation Singapore",
+  description: "Cube Construction specializes in F&B commercial interior design and renovation in Singapore. View our restaurant, cafe, and bar projects."
+};
+
 export default function Home() {
   return (
     <div>
