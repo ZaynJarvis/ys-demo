@@ -1,14 +1,17 @@
 import config from '@/app/utils/config.json';
 
 export default function AboutPage() {
+    const icons = ['🏗️', '⚡', '🎯'];
+    const iconBgs = ['from-amber-500 to-amber-600', 'from-cyan-500 to-cyan-600', 'from-orange-500 to-orange-600'];
+    
     return (
-        <div className="w-full bg-gray-50">
+        <div className="w-full bg-slate-900">
             <div className="container mx-auto px-4 py-16">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">ABOUT US</h2>
-                    <div className="w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Creating exceptional spaces that inspire and transform the way people experience your business
+                    <h2 className="text-4xl md:text-5xl font-bold text-slate-50 mb-4">ABOUT US</h2>
+                    <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-6"></div>
+                    <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                        Creating exceptional commercial spaces that inspire success and transform business experiences
                     </p>
                 </div>
                 
@@ -16,15 +19,17 @@ export default function AboutPage() {
                     {config.about.map((item, index) => (
                         <div 
                             key={item.title} 
-                            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                            className="bg-slate-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 hover:-translate-y-2 ring-1 ring-slate-700 hover:ring-amber-500/30"
                         >
-                            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
-                                <span className="text-2xl text-amber-600">
-                                    {index === 0 ? '🏆' : index === 1 ? '✨' : '🚀'}
+                            <div className={`w-20 h-20 bg-gradient-to-r ${iconBgs[index]} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
+                                <span className="text-3xl text-slate-900">
+                                    {icons[index]}
                                 </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <h3 className="text-2xl font-bold text-slate-50 mb-4 group-hover:text-amber-400 transition-colors">
+                                {item.title}
+                            </h3>
+                            <p className="text-slate-300 leading-relaxed">
                                 {item.content}
                             </p>
                         </div>

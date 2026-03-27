@@ -13,17 +13,17 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-slate-900">
       <NavBar />
       <HeroSection />
       <ActionButtons />
-      <section id="projects" className="bg-white py-16">
+      <section id="projects" className="bg-slate-800 py-16">
         <ProductsPage />
       </section>
-      <section id="about" className="bg-gray-50 py-16">
+      <section id="about" className="bg-slate-900 py-16">
         <AboutPage />
       </section>
-      <section id="contact" className="bg-white py-16">
+      <section id="contact" className="bg-slate-800 py-16">
         <ContactPage />
       </section>
       <WhatsAppButton/>
