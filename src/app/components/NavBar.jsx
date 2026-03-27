@@ -2,62 +2,100 @@
 
 import { useState, useEffect } from "react";
 
-// Declare this file as a client component
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
-        // Only toggle if on small screen
         if (window.innerWidth < 768) {
             setIsOpen(prevState => !prevState);
         }
     };
 
-    // Effect to ensure that the menu stays open on larger screens
     useEffect(() => {
         const handleResize = () => {
-            // Automatically open or close the menu based on screen size
             setIsOpen(window.innerWidth >= 768);
         };
 
-        // Set up event listener
-        window.addEventListener('resize', handleResize);
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
 
-        // Call the handler right away so state gets updated with initial window size
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
         handleResize();
 
-        // Clean up listener when the component unmounts
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
-        <nav className="fixed top-0 right-0 mt-4 mr-4 z-50">
-            {/* Menu Icon for Mobile */}
-            <div className="md:hidden flex items-center">
-                <button onClick={toggleMenu} className="text-white focus:outline-none">
-                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        }`}>
+            <div className="container mx-auto px-4 flex justify-between items-center">
+                {/* Logo */}
+                <div className="text-2xl font-bold">
+                    <span className={`${isScrolled ? 'text-gray-900' : 'text-gray-900'}`}>
+                        CUBE CONSTRUCTION
+                    </span>
+                </div>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center space-x-8">
+                    <a href="#home" className={`hover:text-amber-600 transition-colors font-medium ${
+                        isScrolled ? 'text-gray-900' : 'text-gray-900'
+                    }`}>
+                        HOME
+                    </a>
+                    <a href="#projects" className={`hover:text-amber-600 transition-colors font-medium ${
+                        isScrolled ? 'text-gray-900' : 'text-gray-900'
+                    }`}>
+                        PROJECTS
+                    </a>
+                    <a href="#about" className={`hover:text-amber-600 transition-colors font-medium ${
+                        isScrolled ? 'text-gray-900' : 'text-gray-900'
+                    }`}>
+                        ABOUT US
+                    </a>
+                    <a href="#contact" className={`hover:text-amber-600 transition-colors font-medium ${
+                        isScrolled ? 'text-gray-900' : 'text-gray-900'
+                    }`}>
+                        CONTACT
+                    </a>
+                    <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-md transition-colors font-medium">
+                        ONLINE QUOTE
+                    </button>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <div className="md:hidden">
+                    <button onClick={toggleMenu} className={`${
+                        isScrolled ? 'text-gray-900' : 'text-gray-900'
+                    }`}>
+                        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            {/* Links List */}
-            <ul className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 absolute right-0 mt-6 md:mt-0 md:static rounded-lg bg-gray-950 md:bg-transparent transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-70' : 'opacity-0 invisible delay-300'}`}>
-                <li>
-                    <a href="#home" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">Home</a>
-                </li>
-                <li>
-                    <a href="#products" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">Products</a>
-                </li>
-                <li>
-                    <a href="#about" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">About</a>
-                </li>
-                <li>
-                    <a href="#contact" onClick={() => toggleMenu()} className="text-white hover:text-gray-300 cursor-pointer block p-4">Contact</a>
-                </li>
-            </ul>
+            {/* Mobile Menu */}
+            {isOpen && (
+                <div className="md:hidden bg-white border-t border-gray-200">
+                    <div className="px-4 py-2 space-y-2">
+                        <a href="#home" className="block py-2 text-gray-900 hover:text-amber-600">HOME</a>
+                        <a href="#projects" className="block py-2 text-gray-900 hover:text-amber-600">PROJECTS</a>
+                        <a href="#about" className="block py-2 text-gray-900 hover:text-amber-600">ABOUT US</a>
+                        <a href="#contact" className="block py-2 text-gray-900 hover:text-amber-600">CONTACT</a>
+                        <button className="w-full mt-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md">
+                            ONLINE QUOTE
+                        </button>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };
