@@ -17,9 +17,14 @@ const HeroSection = () => {
               Bold Design, Exceptional Construction
             </p>
             <div className="pt-8">
-              <button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-amber-500/25">
+              <a 
+                href="https://wa.me/6580881055?text=Hi%2C%20I'm%20interested%20in%20getting%20a%20quote%20for%20construction%20services" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-amber-500/25"
+              >
                 GET QUOTE
-              </button>
+              </a>
             </div>
           </div>
           
