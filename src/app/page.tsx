@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import WhatsAppButton from './components/WhatsAppButton';
 import HeroSection from './components/HeroSection';
 import ActionButtons from './components/ActionButtons';
+import TestimonialsSection from './components/TestimonialsSection';
 
 export const metadata = {
   title: "Cube Construction | F&B Interior Design & Renovation Singapore",
@@ -22,6 +23,9 @@ export default function Home() {
       </section>
       <section id="about" className="bg-white py-16">
         <AboutPage />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
       </section>
       <section id="contact" className="bg-gray-50 py-16">
         <ContactPage />
