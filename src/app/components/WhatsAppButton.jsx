@@ -1,6 +1,7 @@
 const WhatsAppButton = () => {
   const phoneNumber = "+6580881055";
-  const waLink = `https://wa.me/${phoneNumber}`;
+  const message = "Hi, I'm interested in getting a quote for construction services";
+  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <a

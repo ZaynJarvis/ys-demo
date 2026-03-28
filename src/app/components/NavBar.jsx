@@ -33,7 +33,7 @@ export default function NavBar() {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-            isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-slate-900/20 py-3' : 'bg-transparent py-4'
+            isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-gray-300/50 py-3' : 'bg-transparent py-4'
         }`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
