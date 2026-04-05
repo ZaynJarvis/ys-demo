@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSpinner, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaExclamationTriangle } from 'react-icons/fa';
 
 interface FormData {
   name: string;
@@ -26,8 +26,6 @@ const ContactPage = () => {
   });
   
   const [errors, setErrors] = useState<ValidationErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [touched, setTouched] = useState<{[key: string]: boolean}>({});
 
   const validateField = (name: string, value: string): string | undefined => {
@@ -120,30 +118,13 @@ const ContactPage = () => {
       return;
     }
 
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+    const text = `Hi, I'd like to request a quote.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    const waUrl = `https://wa.me/6589729228?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
 
-    try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // For now, we'll just show success - in real implementation, send to API
-      console.log('Form submitted:', formData);
-      
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setTouched({});
-      setErrors({});
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-      
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    setFormData({ name: '', email: '', phone: '', message: '' });
+    setTouched({});
+    setErrors({});
   };
 
   const inputClasses = (fieldName: keyof FormData) => {
@@ -193,7 +174,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <p className="text-gray-500 text-sm font-medium">Phone</p>
-                <p className="text-gray-900 text-lg font-semibold">+65 8088 1055</p>
+                <p className="text-gray-900 text-lg font-semibold">+65 8972 9228</p>
               </div>
             </div>
 
@@ -204,9 +185,9 @@ const ContactPage = () => {
               <div>
                 <p className="text-gray-500 text-sm font-medium">Address</p>
                 <p className="text-gray-900 text-lg font-semibold">
-                  52 Telok Blangah Road,<br/>
-                  #02-11,<br/>
-                  Singapore 098829
+                  Blk 1093 Lower Delta Road,<br/>
+                  #01-01,<br/>
+                  Singapore 169204
                 </p>
               </div>
             </div>
@@ -216,26 +197,6 @@ const ContactPage = () => {
           <div className="bg-white rounded-2xl p-8 ring-1 ring-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
             
-            {/* Success Message */}
-            {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center space-x-3">
-                <FaCheckCircle className="text-green-500 w-5 h-5" />
-                <p className="text-green-800 font-medium">
-                  Message sent successfully! We&apos;ll get back to you soon.
-                </p>
-              </div>
-            )}
-
-            {/* Error Message */}
-            {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center space-x-3">
-                <FaExclamationTriangle className="text-red-500 w-5 h-5" />
-                <p className="text-red-800 font-medium">
-                  There was an error sending your message. Please try again.
-                </p>
-              </div>
-            )}
-
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div>
                 <input
@@ -246,7 +207,6 @@ const ContactPage = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={inputClasses('name')}
-                  disabled={isSubmitting}
                 />
                 {errors.name && (
                   <p className="mt-2 text-sm text-red-600 flex items-center space-x-1">
@@ -265,7 +225,6 @@ const ContactPage = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={inputClasses('email')}
-                  disabled={isSubmitting}
                 />
                 {errors.email && (
                   <p className="mt-2 text-sm text-red-600 flex items-center space-x-1">
@@ -284,7 +243,6 @@ const ContactPage = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={inputClasses('phone')}
-                  disabled={isSubmitting}
                 />
                 {errors.phone && (
                   <p className="mt-2 text-sm text-red-600 flex items-center space-x-1">
@@ -303,7 +261,6 @@ const ContactPage = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={inputClasses('message')}
-                  disabled={isSubmitting}
                 />
                 {errors.message && (
                   <p className="mt-2 text-sm text-red-600 flex items-center space-x-1">
@@ -315,21 +272,9 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500/50 shadow-lg ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 hover:shadow-amber-500/25 active:scale-95'
-                }`}
+                className="w-full py-4 px-6 rounded-xl font-bold text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500/50 shadow-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 hover:shadow-amber-500/25 active:scale-95"
               >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center space-x-2">
-                    <FaSpinner className="w-4 h-4 animate-spin" />
-                    <span>Sending Message...</span>
-                  </span>
-                ) : (
-                  'Send Message'
-                )}
+                Send via WhatsApp
               </button>
 
               <p className="text-sm text-gray-500 text-center">

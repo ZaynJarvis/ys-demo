@@ -57,7 +57,7 @@ export default function NavBar() {
                     <a href="#contact" className="hover:text-amber-500 transition-colors font-medium text-gray-700">
                         CONTACT
                     </a>
-                    <a href="https://wa.me/6580881055?text=Hi%2C%20I'm%20interested%20in%20getting%20a%20quote%20for%20construction%20services" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 py-2 rounded-md transition-all duration-300 font-bold shadow-lg hover:shadow-amber-500/25">
+                    <a href="https://wa.me/6589729228?text=Hi%2C%20I'm%20interested%20in%20getting%20a%20quote%20for%20construction%20services" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 py-2 rounded-md transition-all duration-300 font-bold shadow-lg hover:shadow-amber-500/25">
                         GET QUOTE
                     </a>
                 </div>

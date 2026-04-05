@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ProjectGallery({ gallery }) {
   if (!gallery || !gallery.length) {
-    return <div className="mt-8 text-gray-400">No gallery images for this project.</div>;
+    return <div className="mt-8 text-gray-500">No gallery images for this project.</div>;
   }
 
   return (
